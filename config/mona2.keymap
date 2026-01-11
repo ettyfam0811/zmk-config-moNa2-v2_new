@@ -21,7 +21,29 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        M1 {
+            bindings = <&mkp MB1>;
+            key-positions = <17 18>;
+        };
+
+        M2 {
+            bindings = <&mkp MB2>;
+            key-positions = <18 19>;
+        };
+
+        M3 {
+            bindings = <&mkp MB3>;
+            key-positions = <7 18>;
+        };
+
+        open {
+            bindings = <&kp LC(LA(DEL))>;
+            key-positions = <38 39>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
